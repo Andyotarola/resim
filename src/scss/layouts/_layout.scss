@@ -1,0 +1,189 @@
+.container{
+   width: 100%;
+   margin: 0 auto;
+   
+   @for $i from 1 through 12{
+      .row > .col-sm-#{$i}{
+        grid-column: span #{$i};
+      }
+   }
+
+   .row > .col-center{
+      grid-column: span 12;
+   }
+   &.center{
+      display: grid;
+      min-height: 100vh;
+      align-content: center;
+   }
+
+   &.expanded{
+      width: 100%;
+   }
+   & > .row{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      row-gap: 1rem;
+      column-gap: .65rem;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-top: .9em;
+      padding-bottom: .9em;
+   }
+
+   @include rwd(medium){
+      width: 94%;
+      @for $i from 1 through 12{
+         .row > .col-md-#{$i}{
+           grid-column: span #{$i};
+         }
+      }
+      .row > .col-center{
+         grid-column: 4 / span 6;
+      }
+   }
+
+   @include rwd(large){
+      width: 96%;
+      @for $i from 1 through 12{
+         .row > .col-lg-#{$i}{
+           grid-column: span #{$i};
+         }
+      }
+   }
+   @include rwd(xlarge){
+      width: 70%;
+   }
+
+}
+
+
+$positions: top ,bottom ,left ,right;
+
+@for $i from 1 through length($positions){
+
+  @for $x from 1 through 5{
+
+   .m#{str-slice(nth($positions, $i),1,1)}-#{$x}{
+      margin-#{nth($positions, $i)}: $x * .25rem !important;
+   }
+   .p#{str-slice(nth($positions, $i),1,1)}-#{$x}{
+     padding-#{nth($positions, $i)}: $x * .25rem !important;
+   }
+
+   @include rwd(medium, large){
+      .m-md-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
+         margin-#{nth($positions, $i)}: $x * .25rem !important;
+      }
+      .p-md-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
+         padding-#{nth($positions, $i)}: $x * .25rem !important;
+      }
+   }
+   @include rwd(large){
+      .m-lg-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
+         margin-#{nth($positions, $i)}: $x * .25rem !important;
+      }
+      .p-lg-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
+         padding-#{nth($positions, $i)}: $x * .25rem !important;
+      }
+   }
+
+   @include rwd(0, 768px){
+      .m-sm-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
+         margin-#{nth($positions, $i)}: $x * .25rem !important;
+      }
+      .p-sm-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
+         padding-#{nth($positions, $i)}: $x * .25rem !important;
+      }
+   }
+
+  }
+
+}
+@for $x from 1 through 5{
+   .p-#{$x}{
+     padding: $x * .25rem;
+   }
+   .m-#{$x}{
+     margin: $x * .25rem;
+   } 
+}
+.m-none{
+   margin: 0 !important;
+}
+.p-none{
+   padding: 0 !important;
+}
+.w-100{
+   width: 100% !important;
+}
+
+.flex{
+   display: flex;
+ }
+ 
+ .flex--reverse{
+   flex-direction: row-reverse;
+ }
+ 
+ .flex--column{
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .flex--column--reverse{
+   flex-direction: column-reverse;
+ }
+ 
+ .jc--center{
+   justify-content:center;
+ }
+ 
+ .jc--end{
+   justify-content: flex-end;
+ }
+ 
+ .jc--around{
+   justify-content: space-around;
+ }
+ 
+ .jc--between{
+   justify-content: space-between;
+ }
+ 
+ .ai--center{
+   align-items:center;
+ }
+ 
+ .ai--end{
+   align-items:flex-end;
+ }
+ 
+ .ai--around{
+   align-items:space-around;
+ }
+ 
+ .ai--between{
+   align-items:space-between;
+ }
+ 
+ .as--start{
+   align-self: flex-start;
+ }
+ 
+ .as--center{
+   align-self:center;
+ }
+ 
+ .as--end{
+   align-self:flex-end;
+ }
+ 
+ .as--around{
+   align-self:space-around;
+ }
+ 
+ .as--between{
+   align-self:space-between;
+ }

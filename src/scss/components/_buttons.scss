@@ -1,0 +1,54 @@
+@each $key,$value in $buttonsColor{
+
+   .btn--#{$key}{
+     width: auto;
+     border: none;
+     background-color: $value;
+     padding: 1em 1em 1em;
+     border-radius: .3rem;
+     color: #fff;
+     cursor: pointer;
+     transition: background-color .4s;
+   }
+ 
+   .btn--#{$key}:focus{
+     border: none;
+     outline:none;
+     box-shadow: 0 0 0 .2rem lighten($value, 30%);
+   }
+   .btn--#{$key}:hover{
+     background-color: darken($value, 5%);
+   }
+ 
+ }
+ 
+ @each $key,$value in $buttonsColor{
+ 
+   .btn-outline--#{$key}{
+     width: auto;
+     border: none;
+     border: 1px solid $value;
+     background-color: #fff;
+     padding: 1em 1em 1em;
+     border-radius: .3rem;
+     color: $value;
+     transition: .3s;
+     cursor: pointer;
+   }
+ 
+   .btn-outline--#{$key}:hover{
+     background-color: $value;
+     color:#fff;
+   }
+ 
+   .btn-outline--#{$key}:focus{
+     outline:none;
+     box-shadow: 0 0 0 .2rem lighten($value, 30%);
+   }
+ 
+ }
+ 
+ .btn--block{
+   width: 100%;
+   text-align: center;
+ }

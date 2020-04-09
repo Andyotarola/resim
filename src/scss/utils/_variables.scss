@@ -1,0 +1,44 @@
+$breakpoints:(
+  xsmall:320px,
+  small: 576px,
+  medium: 768px,
+  large : 1024px,
+  xlarge: 1200px
+);
+
+$borderColor: #DFE0E0;
+
+$buttonsColor:(
+   primary: $primary,
+   secondary: $secondary,
+   third : $third,
+   success: $success,
+   dark : $dark,
+   danger: $danger,
+   warning: $warning,
+   info : $info,
+   gray: $gray
+);
+
+:root{
+   --z-back: -10;
+   --z-normal: 1;
+   --z-tooltip: 10;
+   --z-fixed: 100;
+   --z-modal: 1000;
+}
+ 
+:root{
+   --primary-color: #{$primary};
+   --primaryAlt-color: #{$primaryAlt};
+   --secondary-color: #{$secondary};
+   --secondaryAlt-color: #{$secondaryAlt};
+   --third-color: #{$third};
+   --thirdAlt-color: #{$thirdAlt};
+   --dark-color: #{$dark};
+   --danger-color: #{$danger};
+   --gray-color: #{$gray};
+   --info-color: #{$info};
+   --warning-color: #{$warning};
+   --success-color: #{$success};
+}

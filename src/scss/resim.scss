@@ -1,0 +1,28 @@
+$primary : #0096f8;
+$primaryAlt : darken($primary, 5%);
+$secondary: #51cf8e;
+$secondaryAlt : darken($secondary, 5%);
+$third : #f56431d9;
+$thirdAlt : darken($third, 5%);
+$success: #28a745;
+$dark : #282D31;
+$danger: #dc3545;
+$warning: #ffc107;
+$info : #17a2b8;
+$gray: #545b62;
+$textColor: #53575A;
+$selectionBgColor : #51cf8e;
+$selectionTxtColor: #fff;
+
+@import "utils/variables";
+@import "utils/mixin";
+
+@import "base/base";
+
+@import "layouts/layout";
+
+@import "themes/backgrounds";
+
+@import "components/form";
+@import "components/buttons"
+

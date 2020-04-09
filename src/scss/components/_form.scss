@@ -1,0 +1,174 @@
+.form{
+
+   margin:0 auto;
+   width: 94vw;
+   border: 1px solid $borderColor;
+   padding: 1em 1em 0 1em;
+ 
+   &__file{
+     display: flex;
+   }
+   &__file--btn{
+     width: auto;
+     position: relative;
+     padding: .75em;
+     font-size: .9em;
+   }
+   &__file--btn:after{
+     content: '';
+     background-image: url(../icons/upload.svg);
+     display: inline-block;
+     width: 15px;
+     height: 15px;
+   }
+ 
+   &__checkbox{
+     display: flex;
+   }
+   &__checkbox--label{
+     display: flex;
+     align-items: flex-end;
+     font-size: .9em;
+   }
+ 
+   &__checkbox--span{
+     width: 18px;
+     height: 18px;
+     background: white;
+     border: 1.5px #5a5a5a solid;
+     margin-left: .5rem;
+     margin-right: .5rem;
+     display: block;
+     position: relative;
+   }
+ 
+   &__checkbox--input:focus + &__checkbox--span{
+     border: 1.5px #26a69a solid;
+   }
+ 
+   &__checkbox--input:checked + &__checkbox--span{
+     border: 1.5px #26a69a solid;
+     background-color:#26a69a;
+     display: flex;
+     justify-content: center;    
+   }
+ 
+   &__checkbox--input:checked + &__checkbox--span:after{
+     content: '';
+     border: solid white;
+     border-width: 0 3px 3px 0;
+     transform: rotate(45deg);
+     width: 6px;
+     height: 13px;
+     display: block;
+   }
+ 
+   &__radio{
+     display: flex;
+   }
+ 
+   &__radio--label{
+     display: flex;
+     align-items: flex-end;
+     font-size: .9em;
+   }
+ 
+   &__radio--span{
+     width: 18px;
+     height: 18px;
+     background: white;
+     border-radius: 50%;
+     border: 1.5px #5a5a5a solid;
+     margin-left: .5rem;
+     margin-right: .5rem;
+     display: block;
+     position: relative;
+   }
+ 
+   &__radio--input:checked + &__radio--span{
+     border: 2px #26a69a solid;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   &__radio--input:focus + &__radio--span{
+     border: 2px #26a69a solid;
+   }
+   &__radio--input:checked + &__radio--span:after{
+     content: '';
+     background: #26a69a;
+     width: 10px;
+     height: 10px;
+     display: block;
+     border-radius: 50%;
+   }
+ 
+   &__group{
+     display: block;
+   }
+ 
+   @include rwd(medium){
+     width: 92vw;
+     &__group{
+       display: flex;
+     }
+   }
+   @include rwd(large){
+     width: 80vw;
+   }
+   @include rwd(xlarge){
+     width: 68vw;
+   }
+   @include rwd(1500px){
+     width: 54vw;
+   }
+ 
+   &__field{
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 1.2em;
+     width: 100%;
+     padding-right: 1em;
+   }
+ 
+   &__field &__label{
+     padding-top: .5em;
+     width: 15%
+   }
+ 
+   &__field textarea{
+     height: 100%;
+   }
+ 
+   &__label ~ &__control{
+     width: 75%;
+   }
+ 
+   &__control{
+      width: 100%;
+      padding: .475rem .75rem;
+      border:1px solid #ced4da;
+      line-height: 1.5;
+      border-radius: .25rem;
+      outline: none;
+      height: 37px;
+      font-family: inherit;
+      &:focus{
+        border-color: #{$primary};
+        box-shadow: 0 0 0 .15rem lighten($primary, 30%);
+      }
+  
+      @each $key,$value in $buttonsColor{
+  
+        &--#{$key}{
+          border-color: $value;
+          color: $value;
+        }
+        &--#{$key}:focus{
+          border-color: $value;
+          box-shadow: 0 0 0 .15rem lighten($value, 30%);
+        }
+      }
+ 
+   }
+ }
