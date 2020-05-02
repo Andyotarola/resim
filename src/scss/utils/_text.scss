@@ -1,0 +1,38 @@
+:root{
+   --text-small:.86rem;
+   --text-medium:1rem;
+   --text-large:3rem;
+ 
+   @include rwd(medium){
+     --text-small:.94rem;
+     --text-medium:1.2rem;
+     --text-large:3.6rem;
+   }
+ 
+   @include rwd(large){
+     --text-small:.99rem;
+     --text-medium:1.4rem;
+     --text-large:3.6rem;
+   }
+ 
+}
+.text{
+   &-center{
+      text-align: center;
+   }
+   &-left{
+      text-align: left;
+   }
+   &-right{
+      text-align: right;
+   }
+   &-sm{
+      font-size:var(--text-small) !important;
+   }
+   &-md{
+      font-size:var(--text-medium) !important;
+   }
+   &-lg{
+      font-size:var(--text-large) !important;
+   }
+}

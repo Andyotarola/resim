@@ -5,7 +5,7 @@ $secondaryAlt : darken($secondary, 5%);
 $third : #f56431d9;
 $thirdAlt : darken($third, 5%);
 $success: #28a745;
-$dark : #282D31;
+$dark : #343a40;
 $danger: #dc3545;
 $warning: #ffc107;
 $info : #17a2b8;
@@ -16,6 +16,8 @@ $selectionTxtColor: #fff;
 
 @import "utils/variables";
 @import "utils/mixin";
+@import "utils/text";
+@import "utils/icons";
 
 @import "base/base";
 
@@ -24,5 +26,5 @@ $selectionTxtColor: #fff;
 @import "themes/backgrounds";
 
 @import "components/form";
-@import "components/buttons"
-
+@import "components/buttons";
+@import "components/navbar";

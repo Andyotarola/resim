@@ -1,10 +1,13 @@
 @each $key,$value  in $buttonsColor {
    .bg--#{$key}{
-     background-color: #{$value};
-     color: #fff;
+     background-color: #{$value} !important;
+     color: #fff !important;
    }
 }
 .bg--white{
-   color: $textColor;
-   background-color: #fff;
+   color: $textColor !important;
+   background-color: #fff !important;
+}
+.bg--transparent{
+   background-color: transparent !important;
 }

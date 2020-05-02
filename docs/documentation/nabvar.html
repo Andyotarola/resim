@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Resim | Nabvar</title>
+   <link rel="stylesheet" href="../../dist/css/resim.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+   <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+   <nav class="navbar bg--primary">
+      <div class="navbar__main collapse">
+         <div class="navbar__title">
+            Navbar
+         </div>       
+         <div class="navbar__content">
+            <div class="menu-open" data-target="#navbar1" data-toggle="navbar"></div>
+            <ul class="navbar__list center" id="navbar1">
+               <li class="navbar__item">
+                  <a href="#inicio" class="navbar__link">Inicio</a>
+               </li class="navbar__item">
+               <li class="navbar__item">
+                  <a href="#" class="navbar__link" data-target="#productos" data-toggle="navbar_sublist">Productos <span class="arrow-bottom"></span></a>
+                  <ul class="navbar__sublist" id="productos">
+                     <li class="navbar__item">
+                        <a href="#" class="navbar__link" data-target="#celulares" data-toggle="navbar_sublist">Celulares <span class="arrow"></span></a>
+                        <ul class="navbar__lastlist" id="celulares">
+                           <li class="navbar__item">
+                              <a href="#" class="navbar__link">Iphone</a>
+                           </li>
+                           <li class="navbar__item">
+                              <a href="#" class="navbar__link">Samsung</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="navbar__item">
+                        <a href="#telivisores" class="navbar__link">Televisores</a>
+                     </li>
+                     <li class="navbar__item">
+                        <a href="#equipos" class="navbar__link">Equipos de sonido</a>
+                     </li>
+                     <li class="navbar__item">
+                        <a href="#play" class="navbar__link">Play Station</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="navbar__item">
+                  <a href="#marcas" class="navbar__link" data-toggle="navbar_sublist" data-target="#marcas">Marcas <span class="arrow-bottom"></span></a>
+                  <ul class="navbar__sublist" id="marcas">
+                     <li class="navbar__item">
+                        <a href="#" class="navbar__link" data-toggle="navbar_sublist" data-target="#sony">SONY <span class="arrow"></span></a>
+                        <ul class="navbar__lastlist" id="sony">
+                           <li class="navbar__item">
+                              <a href="" class="navbar__link">sony</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+               <li class="navbar__item">
+                  <a href="#contactenos" class="navbar__link">Contactenos</a>
+               </li>
+               <li class="navbar__item">
+                  <a href="#promociones" class="navbar__link">Promociones</a>
+               </li>
+               <li class="navbar__item">
+                  <a href="#solicitud_de_crédito" class="navbar__link">Solicitud de crédito</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   
+   <div class="container">
+      <pre>
+      <code class="html">
+      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar bg--primary"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__main collapse"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__title"</span>&gt;</span>
+            Navbar
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>       
+         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__content"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu-open"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#navbar1"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"navbar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__list center"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"navbar1"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#inicio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Inicio<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#productos"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"navbar_sublist"</span>&gt;</span>Productos <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arrow-bottom"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__sublist"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"productos"</span>&gt;</span>
+                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#celulares"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"navbar_sublist"</span>&gt;</span>Celulares <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__lastlist"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"celulares"</span>&gt;</span>
+                           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Iphone<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Samsung<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#telivisores"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Televisores<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#equipos"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Equipos de sonido<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#play"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Play Station<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#marcas"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"navbar_sublist"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#marcas"</span>&gt;</span>Marcas <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arrow-bottom"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__sublist"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"marcas"</span>&gt;</span>
+                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"navbar_sublist"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#sony"</span>&gt;</span>SONY <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__lastlist"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sony"</span>&gt;</span>
+                           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>sony<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#contactenos"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Contactenos<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#promociones"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Promociones<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#solicitud_de_crédito"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Solicitud de crédito<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+         </code>
+      </pre>
+   </div>
+
+   <script src="../../dist/js/resim.min.js"></script>
+   
+</body>
+</html>

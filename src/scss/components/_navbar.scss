@@ -1,0 +1,219 @@
+.navbar{
+   background-color: #fff;
+   width: 100%;
+   color: $textColor;
+   padding: .5rem 1rem;
+   font-size: 1.25rem;
+   position: fixed;
+   top: 0;
+   z-index: var(--z-fixed);
+
+   &.navbar + *{
+      margin-top: 44px;
+   }
+
+   &__link > .arrow{
+      transform: rotate(90deg) !important;
+   }
+
+   &__main{
+      display: grid;
+      grid-template-columns: .5fr .5fr;
+      justify-content: space-between;
+   }
+   &__item{
+      font-size: 1rem;
+      padding: 1em;
+   }
+   &__sublist{
+      display: none;
+   }
+   &__lastlist{
+      display: none;
+   }
+
+   &__main.reverse &__title{
+      grid-column: 2 / span 1;
+      grid-row: 1;
+      justify-self: flex-end;
+   }
+   &__main.reverse &__content{
+      grid-column: 1 / span 1;
+      grid-row: 1;
+      justify-self: flex-start;
+   }
+
+   &__main.collapse  &__list{
+      width: 100%;
+      height: 0px;
+      transform: translateX(0);      
+      transition: height .4s;
+   }
+
+   &__content{
+      justify-self: flex-end;
+   }
+
+   &__main.expanded{
+      width: 100%;
+   }
+   &__list{
+      position: fixed;
+      right: 0;
+      width: 70%;
+      background-color: var(--dark-color);
+      top: 44px;
+      transition: transform .4s;
+      transform: translateX(102%);
+      overflow-y: auto;
+      height: calc(100vh - 44px);
+   }
+
+   &__main.reverse &__list{
+      transform: translateX(-102%);
+      left: 0;
+   }
+
+   &__title{
+      text-align: start;
+   }
+
+   &--active{
+      transform: translateX(0) !important;      
+   }
+
+   &__list.end{
+      justify-content: flex-end;
+   }
+   &__list.center{
+      justify-content: center;
+   }
+
+   &__link{
+      display: flex;
+   }
+   @include rwd(large){
+      &__link > .arrow{
+         transform: rotate(0deg) !important;
+      }
+      &__main{
+         margin: 0 auto;
+         width: 96%;
+         grid-template-columns: .125fr .875fr;
+      }
+      &__list{
+         display: flex;
+         padding-top: .3rem;
+         position: static !important;
+         transform: translateX(0%) !important;
+         height: auto !important;
+         width: auto;
+         background-color: inherit !important;
+         color: inherit !important;
+         overflow: visible;
+      }
+      &__sublist{
+         position: absolute;
+         background-color: #fff;
+         color: $textColor;
+         width: 200%;
+         opacity: 0;
+         transform: translateY(1.5rem);
+         pointer-events: none;
+         transition: opacity .25s,transform .25s;
+         display: block !important;
+         overflow: visible !important;
+         height: auto !important;
+         border: 1px solid rgba(0,0,0,.15);
+      }
+      &__item:hover &__sublist{
+         opacity: 1;
+         transform: translateY(0px);
+         pointer-events: auto;
+      }
+      &__item{
+         margin: 0 1.25rem;
+         padding: 0;
+         position: relative;
+      }
+      &__link{
+         display: flex;
+      }
+      &__sublist > &__item{
+         margin: 0;
+      }
+      &__sublist > &__item > &__link{
+         font-size: .9rem;
+         padding: .25rem 1.5rem;
+         justify-content: space-between;
+      }
+      &__sublist > &__item > &__link:hover{
+         background-color: #eee;
+         opacity: initial;
+      }
+      &__lastlist > &__item{
+         margin: 0;
+      }
+      &__lastlist > &__item > &__link{
+         font-size: .9rem;
+         padding: .25rem 1.5rem;
+         justify-content: space-between;
+      }
+      &__lastlist > &__item > &__link:hover{
+         background-color: #eee;
+         opacity: initial;
+      }
+      &__lastlist{
+         position: absolute;
+         left: 100%;
+         top: 0;
+         background-color: #fff;
+         color: $textColor;
+         width: 100%;
+         opacity: 0;
+         transform: translateY(1.5rem);
+         pointer-events: none;
+         transition: opacity .25s,transform .25s;
+         height: auto !important;
+         display: block;
+         border: 1px solid rgba(0,0,0,.15);
+      }
+
+      &__sublist > &__item:hover &__lastlist{
+         opacity: 1;
+         transform: translateY(0);
+         pointer-events: auto;
+      }
+
+      &__link:hover{
+         opacity: .8;
+         border-bottom: 1px solid;
+      }
+
+      &__link:focus{
+         border-bottom: 1px solid;
+      }
+   
+      &__title{
+         grid-column: 1 / span 1 !important;
+         justify-self: initial !important;
+      }
+      &__content{      
+         justify-self: initial !important;
+         grid-column: 2 / span 1 !important;
+      }
+
+   }
+
+   @include rwd(xlarge){
+      &__main{
+         margin: 0 auto;
+         width: 75%;
+      }
+   }
+   @include rwd(1400px){
+      &__main{
+         width: 70%;
+      }
+   }
+}

@@ -22,7 +22,8 @@ const _module = {
 module.exports = {
    entry,
    output,
-   module:_module
+   module:_module,
+   watch:true
 }
 
 

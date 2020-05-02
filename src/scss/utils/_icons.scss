@@ -1,0 +1,64 @@
+%menu-open{
+   background-repeat: no-repeat;
+   width: 28px;
+   height: 28px;
+   display: block;
+   cursor: pointer;
+   @include rwd(large){
+      display: none;
+   }
+}
+
+.menu-open{
+   @extend %menu-open;
+   background-image: url(../icons/menu-open.svg);
+}
+
+.menu-open-dark{
+   @extend %menu-open;
+   background-image: url(../icons/menu-open-dark.svg);
+}
+
+.menu-close{
+   background-image: url(../icons/menu-close.svg);
+   width: 32px;
+   height: 32px;
+   background-color: #ccc;
+   border-radius: 50%;
+   cursor: pointer;
+   display: block;
+}
+
+%arrow{
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+   display: block;
+   clip-path: polygon(36% 36%, 36% 64% ,64% 50%);
+}
+
+.arrow{
+   @extend %arrow;
+   background: currentColor;
+}
+
+.arrow-bottom{
+   @extend %arrow;
+   margin-top: 0.15em;
+   background: currentColor;
+   transform: rotate(90deg);
+}
+
+.more-icon{
+   background-image: url(../icons/more.svg);
+   width: 24px;
+   height: 24px;
+   cursor: pointer;
+}
+ 
+.arrow-back{
+   background-image: url(../icons/arrow-back.svg);
+   width: 20px;
+   height: 20px;
+}
+ 

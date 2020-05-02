@@ -5,30 +5,166 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Resim | Layout</title>
    <link rel="stylesheet" href="../../dist/css/resim.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+   <script>hljs.initHighlightingOnLoad();</script>
 </head>
-<body style="background-color: #60488a;">
+<body>
 
-   <div class="container center">
+   <div class="container">
+      <h1 class="text-center text-md">LAYOUT RESIM</h1>
+   </div>
+
+   <div class="container">
       <div class="row">
-         <div class="col-sm-12 p-4 bg--white">
-            <div class="flex jc--center mb-3">
-               <h1>LOGIN</h1>
-            </div>
-            <div class="mb-3">
-               <input type="text" placeholder="Nombres" class="form__control mb-3">
-               <input type="text" placeholder="Apellidos" class="form__control mb-3">
-               <input type="text" placeholder="Nombres" class="form__control mb-3">
-               <input type="text" placeholder="Apellidos" class="form__control mb-3">
-               <input type="text" placeholder="Nombres" class="form__control mb-3">
-               <input type="text" placeholder="Apellidos" class="form__control mb-3">
-               <input type="text" placeholder="Nombres" class="form__control mb-3">
-               <input type="text" placeholder="Apellidos" class="form__control mb-3">
-               <input type="text" placeholder="Nombres" class="form__control mb-3">
-               <input type="text" placeholder="Apellidos" class="form__control mb-3">
-               <input type="submit" value="Enviar" class="btn--primary">
-            </div>
+         <div class="col-sm-12">
+            <h1>Grid de 12 columnas</h1>
          </div>
       </div>
+      <div class="row">
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 1</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 2</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 3</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 4</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 5</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 6</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 7</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 8</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 9</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 10</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 11</div>
+         <div class="col-sm-12 col-lg-1 bg--primary text-center">col 12</div>
+      </div>
+   </div>
+
+   <!-- Highlight code -->
+
+   <div class="container">
+      <pre>
+         <code class="html">
+         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Grid de 12 columnas<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 5<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 7<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 9<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 10<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 11<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 col-lg-1 bg--primary text-center"</span>&gt;</span>col 12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         </code>
+      </pre>
+   </div>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <h2>Columna centrada</h2>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-center bg--primary text-center">col 1</div>
+      </div>
+   </div>
+
+   <!-- Highlight code -->
+
+   <div class="container">
+      <pre>
+         <code class="html">
+         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Columna centrada<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-center bg--primary text-center"</span>&gt;</span>col 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         </code>
+      </pre>
+   </div>
+
+   <div class="container expanded">
+      <div class="row">
+         <div class="col-sm-12 text-center">
+            <h2>Contenedor expandido</h2>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-center bg--primary text-center">col 1</div>
+      </div>
+   </div>
+
+   <!-- Highlight code -->
+
+   <div class="container">
+      <pre>
+         <code>
+         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container expanded"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 text-center"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Contenedor expandido<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-center bg--primary text-center"</span>&gt;</span>col 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         </code>
+      </pre>
+   </div>
+   
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 text-center">
+            <h2>Grid 2 de columnas</h2>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-6 bg--primary text-center">
+            col-sm-6
+         </div>
+         <div class="col-sm-6 bg--primary text-center">
+            col-sm-6
+         </div>
+      </div>
+   </div>
+
+   <!-- Highlight code -->
+
+   <div class="container">
+      <pre>
+         <code>
+         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-12 text-center"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Grid 2 de columnas<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-6 bg--primary text-center"</span>&gt;</span>
+                  col-sm-6
+               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-6 bg--primary text-center"</span>&gt;</span>
+                  col-sm-6
+               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         </code>
+      </pre>
    </div>
    
 </body>
