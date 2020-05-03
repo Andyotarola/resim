@@ -1,24 +1,28 @@
-.container{
+.container {
    width: 100%;
    margin: 0 auto;
-   @for $i from 1 through 12{
-      .row > .col-sm-#{$i}{
-        grid-column: span #{$i};
+
+   @for $i from 1 through 12 {
+      .row>.col-sm-#{$i} {
+         grid-column: span #{$i};
       }
    }
-   .row > .col-center{
+
+   .row>.col-center {
       grid-column: span 12;
    }
-   &.center{
+
+   &.center {
       display: grid;
       min-height: 100vh;
       align-content: center;
    }
 
-   &.expanded{
+   &.expanded {
       width: 100%;
    }
-   & > .row{
+
+   &>.row {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -30,164 +34,163 @@
       padding-bottom: .9em;
    }
 
-   @include rwd(medium){
+   @include rwd(medium) {
       width: 94%;
-      & > .row{
+
+      &>.row {
          padding-right: 15px;
          padding-left: 15px;
          padding-top: .9em;
          padding-bottom: .9em;
       }
-      @for $i from 1 through 12{
-         .row > .col-md-#{$i}{
-           grid-column: span #{$i};
+
+      @for $i from 1 through 12 {
+         .row>.col-md-#{$i} {
+            grid-column: span #{$i};
          }
       }
-      .row > .col-center{
+
+      .row>.col-center {
          grid-column: 4 / span 6;
       }
    }
 
-   @include rwd(large){
+   @include rwd(large) {
       width: 96%;
-      @for $i from 1 through 12{
-         .row > .col-lg-#{$i}{
-           grid-column: span #{$i};
+
+      @for $i from 1 through 12 {
+         .row>.col-lg-#{$i} {
+            grid-column: span #{$i};
          }
       }
    }
-   @include rwd(xlarge){
+
+   @include rwd(xlarge) {
       width: 70%;
    }
 
 }
 
+$positions: top,bottom,left,right;
 
-$positions: top ,bottom ,left ,right;
+@for $i from 1 through length($positions) {
 
-@for $i from 1 through length($positions){
+   @for $x from 1 through 5 {
 
-  @for $x from 1 through 5{
-
-   .m#{str-slice(nth($positions, $i),1,1)}-#{$x}{
-      margin-#{nth($positions, $i)}: $x * .25rem !important;
-   }
-   .p#{str-slice(nth($positions, $i),1,1)}-#{$x}{
-     padding-#{nth($positions, $i)}: $x * .25rem !important;
-   }
-
-   @include rwd(medium, large){
-      .m-md-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
+      .m#{str-slice(nth($positions, $i),1,1)}-#{$x} {
          margin-#{nth($positions, $i)}: $x * .25rem !important;
       }
-      .p-md-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
-         padding-#{nth($positions, $i)}: $x * .25rem !important;
-      }
-   }
-   @include rwd(large){
-      .m-lg-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
-         margin-#{nth($positions, $i)}: $x * .25rem !important;
-      }
-      .p-lg-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
-         padding-#{nth($positions, $i)}: $x * .25rem !important;
-      }
-   }
 
-   @include rwd(0, 768px){
-      .m-sm-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
-         margin-#{nth($positions, $i)}: $x * .25rem !important;
-      }
-      .p-sm-#{str-slice(nth($positions, $i),1,1)}-#{$x}{
+      .p#{str-slice(nth($positions, $i),1,1)}-#{$x} {
          padding-#{nth($positions, $i)}: $x * .25rem !important;
       }
-   }
 
-  }
+      @include rwd(medium, large) {
+         .m-md-#{str-slice(nth($positions, $i),1,1)}-#{$x} {
+            margin-#{nth($positions, $i)}: $x * .25rem !important;
+         }
+
+         .p-md-#{str-slice(nth($positions, $i),1,1)}-#{$x} {
+            padding-#{nth($positions, $i)}: $x * .25rem !important;
+         }
+      }
+
+      @include rwd(large) {
+         .m-lg-#{str-slice(nth($positions, $i),1,1)}-#{$x} {
+            margin-#{nth($positions, $i)}: $x * .25rem !important;
+         }
+
+         .p-lg-#{str-slice(nth($positions, $i),1,1)}-#{$x} {
+            padding-#{nth($positions, $i)}: $x * .25rem !important;
+         }
+      }
+
+      @include rwd(0, 768px) {
+         .m-sm-#{str-slice(nth($positions, $i),1,1)}-#{$x} {
+            margin-#{nth($positions, $i)}: $x * .25rem !important;
+         }
+
+         .p-sm-#{str-slice(nth($positions, $i),1,1)}-#{$x} {
+            padding-#{nth($positions, $i)}: $x * .25rem !important;
+         }
+      }
+
+   }
 
 }
-@for $x from 1 through 5{
-   .p-#{$x}{
-     padding: $x * .25rem;
+
+@for $x from 1 through 5 {
+   .p-#{$x} {
+      padding: $x * .25rem;
    }
-   .m-#{$x}{
-     margin: $x * .25rem;
-   } 
+
+   .m-#{$x} {
+      margin: $x * .25rem;
+   }
 }
-.m-none{
+
+.m-none {
    margin: 0 !important;
 }
-.p-none{
+
+.p-none {
    padding: 0 !important;
 }
-.w-100{
+
+.w-100 {
    width: 100% !important;
 }
 
-.flex{
+.flex {
    display: flex;
- }
- 
- .flex--reverse{
+}
+
+.flex--reverse {
    flex-direction: row-reverse;
- }
- 
- .flex--column{
+}
+
+.flex--column {
    display: flex;
    flex-direction: column;
- }
- 
- .flex--column--reverse{
+}
+
+.flex--column--reverse {
    flex-direction: column-reverse;
- }
- 
- .jc--center{
-   justify-content:center;
- }
- 
- .jc--end{
+}
+
+.jc--center {
+   justify-content: center;
+}
+
+.jc--end {
    justify-content: flex-end;
- }
- 
- .jc--around{
+}
+
+.jc--around {
    justify-content: space-around;
- }
- 
- .jc--between{
+}
+
+.jc--between {
    justify-content: space-between;
- }
- 
- .ai--center{
-   align-items:center;
- }
- 
- .ai--end{
-   align-items:flex-end;
- }
- 
- .ai--around{
-   align-items:space-around;
- }
- 
- .ai--between{
-   align-items:space-between;
- }
- 
- .as--start{
-   align-self: flex-start;
- }
- 
- .as--center{
-   align-self:center;
- }
- 
- .as--end{
-   align-self:flex-end;
- }
- 
- .as--around{
-   align-self:space-around;
- }
- 
- .as--between{
-   align-self:space-between;
- }
+}
+
+$self: start,center,end;
+
+@each $value in $self {
+   .as--#{$value}{
+      align-self: #{$value};
+   }
+   .js--#{$value}{
+      justify-self: #{$value};
+   }
+
+   @if $value == start or $value == end{
+      .ai--#{$value}{
+         align-items: flex-#{$value};
+      }
+   }@else{
+      .ai--#{$value}{
+         align-items: #{$value};
+      }
+   }
+}
