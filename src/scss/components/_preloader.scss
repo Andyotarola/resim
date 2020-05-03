@@ -1,0 +1,27 @@
+%preloader{
+   width: 3rem;
+   height: 3rem;
+   border-radius: 50%;
+   animation: spin .75s infinite linear;
+   display: inline-block;
+}
+.preloader{
+   border: .25em solid $primary;
+   @extend %preloader;
+   border-right-color: transparent;
+   @each $color,$value in $buttonsColor {
+      @if $color != 'primary' {
+         &-#{$color}{
+            border: .25em solid $value;
+            @extend %preloader;
+            border-right-color: transparent;
+         }
+      }
+   }
+}
+
+@keyframes spin {
+   to{
+      transform: rotate(1turn);
+   }
+}
