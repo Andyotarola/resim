@@ -186,12 +186,10 @@
       }
 
       &__link:hover{
-         opacity: .8;
-         border-bottom: 1px solid;
+         opacity: .8;  
       }
-
       &__link:focus{
-         border-bottom: 1px solid;
+         opacity: .8;
       }
    
       &__title{

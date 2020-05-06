@@ -16,6 +16,17 @@
    }
  
 }
+
+@each $key,$value in $buttonsColor{
+   .text-#{key}{
+      color: #{$value} !important;
+   }
+} 
+
+.text-white{
+   color: #fff !important;
+}
+
 .text{
    &-center{
       text-align: center;
