@@ -34,7 +34,8 @@
    height: 20px;
    cursor: pointer;
    display: block;
-   clip-path: polygon(36% 36%, 36% 64% ,64% 50%);
+   -webkit-clip-path: polygon(36% 36%, 36% 64% ,64% 50%);
+           clip-path: polygon(36% 36%, 36% 64% ,64% 50%);
 }
 
 .arrow{

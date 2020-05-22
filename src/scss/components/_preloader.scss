@@ -2,7 +2,8 @@
    width: 3rem;
    height: 3rem;
    border-radius: 50%;
-   animation: spin .75s infinite linear;
+   -webkit-animation: spin .75s infinite linear;
+           animation: spin .75s infinite linear;
    display: inline-block;
 }
 .preloader{
@@ -17,6 +18,12 @@
             border-right-color: transparent;
          }
       }
+   }
+}
+
+@-webkit-keyframes spin {
+   to{
+      transform: rotate(1turn);
    }
 }
 

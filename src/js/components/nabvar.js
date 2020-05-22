@@ -1,6 +1,7 @@
 function activeNavbar(){
    let navbars = Array.from(document.querySelectorAll('[data-toggle=navbar]'));
-   let navbars_sublist = Array.from(document.querySelectorAll('   [data-toggle=navbar_sublist]'));
+   let navbars_sublist = Array.from(document.querySelectorAll('[data-toggle=navbar_sublist]'));
+   let backdrop = document.createElement("div");
 
    if(navbars.length > 0){
       navbars.forEach((el,i)=>{
@@ -21,13 +22,20 @@ function activeNavbar(){
          })
    
          if(data_toggle === 'navbar'){
-            btn.addEventListener('click',()=>{
+            btn.addEventListener('click',()=>{   
                navbar.classList.toggle('navbar--active');
+               
+               if(document.body.outerHTML.includes(backdrop.outerHTML)){
+                  document.body.removeChild(backdrop);
+               }else{
+                  backdrop.classList.add("backdrop")
+                  document.body.appendChild(backdrop);
+               }
                if(navbar.parentElement.parentElement.getAttribute('class').includes('collapse')){
-                  if(navbar.style.height === "" || navbar.style.height === "0px"){
+                  if(navbar.style.height === "" || navbar.style.height === "0px"){   
                      navbar.style.height = navbar_height + "px";
                   }else{
-                     navbar.style.height = "0px";
+                     navbar.style.height = "0px";  
                   }
                }
             })         
@@ -63,15 +71,25 @@ function activeNavbar(){
 
    // Quitar el navbar, si el innerHTML del click no está dentro del innerHTML del contenedor "div.navbar__list"
    
+   const removeMenu = ()=>{
+      navbar.classList.remove('navbar--active')
+      if(navbar.parentElement.parentElement.getAttribute('class').includes('collapse')){
+         navbar.style.height = "0px";
+      }
+      if(document.body.outerHTML.includes(backdrop.outerHTML)){
+         document.body.removeChild(backdrop);
+      }
+   }
+
    window.addEventListener('click', (e)=>{
       navbars.forEach((el,i)=>{
          let data_target = el.dataset.target;       
          navbar = document.querySelector(`${data_target}`);
          if(!el.parentElement.innerHTML.includes(e.target.innerHTML)){
-            navbar.classList.remove('navbar--active')
-            if(navbar.parentElement.parentElement.getAttribute('class').includes('collapse')){
-               navbar.style.height = "0px";
-            }
+            removeMenu();
+         }
+         if(e.target.outerHTML.includes("backdrop")){
+            removeMenu();
          }
 
       })

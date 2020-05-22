@@ -25,6 +25,3 @@ module.exports = {
    module:_module,
    watch:true
 }
-
-
-// console.log(__dirname);
