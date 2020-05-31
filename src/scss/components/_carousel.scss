@@ -1,22 +1,38 @@
 .carousel{
    width: auto;
    height: 400px;
-   background-color: #ccc;
+   background-color: #ddd;
    position: relative;
    overflow: hidden;
    &__container{
       height: inherit;
       position: relative;
       width: 100%;
-      display: flex;
+      display: block;
+      overflow: hidden;
    }
 
-   &__item{
+   &__item{   
+      height: inherit;
+      display: none;
+      transition: transform .25s linear;
       position: relative;
-      flex-shrink: 0;
-      display: flex;
-      height: 100%;
       width: 100%;
+      margin-right: -100%;
+      float: left;
+      backface-visibility: hidden;
+   }
+
+   .carousel__active.carousel__item--right, &__item--next:not(.carousel__item--left){
+      transform: translateX(100%);
+   }
+
+   .carousel__active.carousel__item--left, &__item--prev:not(.carousel__item--right){
+      transform: translateX(-100%);
+   }
+
+   &__active, &__item--next, &__item--prev{
+      display: block;
    }
 
    &__content{   
@@ -37,6 +53,7 @@
       align-items: center;
       cursor: pointer;
       transition: transform .2s cubic-bezier(.25,.8,.5,1);
+      color: #fff;
    }
 
    %carousel_navigate_icon{
@@ -64,36 +81,17 @@
       transform: translateX(0%);
    }
 
-   &__ripple{
+   &__prev::after{
+      content: "";
       display: block;
-      position: absolute;
-      width: 36px;
-      height: 36px;
-      background: #FFf;
-      opacity: .4;
-      border-radius: 50%;
-      clip-path: circle(25%);
-      animation: ripple .3s linear forwards;
-   }
-
-   @keyframes ripple {
-      to{
-         clip-path: circle(100%);
-      }
-   }
-
-   // &__prev:hover:before{
-   //    clip-path: circle(100%);
-   //    // background-color: red;
-   // }
-
-   &__prev--icon{
       @extend %carousel_navigate_icon;
       transform: rotate(45deg);
       margin-left: .2rem;
    }
 
-   &__next--icon{
+   &__next::after{
+      content: "";
+      display: block;
       @extend %carousel_navigate_icon;
       transform: rotate(-135deg);
       margin-right: .2rem;
@@ -109,18 +107,33 @@
       align-items: center;
    }
 
-   &__pagination{
-      width: 16px;
-      height: 16px;
+   &__pagination{      
+      width: 28px;
+      height: 28px;
       margin-left: .8em;
       border-radius: 50%;
-      background-color: #fff;
-      opacity: .5;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+   }
+   &__pagination:hover::after{
+      background-color: rgba(255, 255, 255, .9);  
+      box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
    }
 
-   &__pagination.active{
-      box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, .4);
+   &__pagination::after{
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-color: rgba(255, 255, 255, .6);
+      border-radius: 50%;
+      transition: box-shadow .3s, background-color .3s;
+   }
+
+   &__pagination.active::after{
+      box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .3) !important;
    }
 
 }

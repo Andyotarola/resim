@@ -1,52 +1,107 @@
-@each $key,$value in $buttonsColor{
+@each $key,
+$value in $buttonsColor {
 
-   .btn--#{$key}{
-     width: auto;
-     border: none;
-     background-color: $value;
-     padding: 1em 1em 1em;
-     color: #fff;
-     cursor: pointer;
-     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-   }
- 
-   .btn--#{$key}:focus{
-     border: none;
-     outline:none;
-     box-shadow: 0 0 0 .2rem lighten($value, 30%);
-   }
-   .btn--#{$key}:hover{
-     background-color: darken($value, 5%);
-   }
- 
- }
- 
- @each $key,$value in $buttonsColor{
- 
-   .btn-outline--#{$key}{
-     width: auto;
-     border: none;
-     border: 1px solid $value;
-     background-color: #fff;
-     padding: 1em 1em 1em;
-     color: $value;
-     transition: .3s;
-     cursor: pointer;
-   }
- 
-   .btn-outline--#{$key}:hover{
-     background-color: $value;
-     color:#fff;
-   }
- 
-   .btn-outline--#{$key}:focus{
-     outline:none;
-     box-shadow: 0 0 0 .2rem lighten($value, 30%);
-   }
- 
- }
- 
- .btn--block{
-   width: 100%;
-   text-align: center;
- }
+  .btn--#{$key} {
+    width: auto;
+    border: none;
+    background-color: $value;
+    padding: 1em 1em 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    user-select: none;
+  }
+
+  .btn--#{$key}:focus {
+    border: none;
+    outline: none !important;
+    box-shadow: 0 0 0 .2rem lighten($value, 30%);
+  }
+
+  .btn--#{$key}:hover {
+    background-color: darken($value, 5%);
+  }
+
+}
+
+@each $key,
+$value in $buttonsColor {
+
+  .btn-flat__#{$key}{
+    border-radius: 4px;
+    width: auto;
+    border: none;
+    background:none;
+    padding: 1em 1em 1em;
+    color: $value;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .btn-flat__#{$key}:hover{
+    background-color: rgba($value, .09);
+  }
+
+  .btn-flat__#{$key}:focus{
+    outline: none !important;
+    background-color: rgba($value, .2);
+  }  
+
+  .btn-outline__#{$key} {
+    border-radius: 4px;
+    width: auto;
+    border: none;
+    border: 1px solid $value;
+    background-color: #fff;
+    padding: 1em 1em 1em;
+    color: $value;
+    transition: .3s;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .btn-outline__#{$key}:hover {
+    background-color: $value;
+    color: #fff;
+  }
+
+  .btn-outline__#{$key}:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 .2rem lighten($value, 30%);
+  }
+
+}
+
+.btn--block {
+  width: 100%;
+  text-align: center;
+}
+
+.btn--close {
+  width: auto;
+  border: none;
+  background-color: transparent;
+  font-size: 1.1em;
+  color: $textColor;
+  padding:0 .2em;
+  user-select: none;
+}
+
+@include rwd(large){
+  .btn--close{
+    font-size: 1.5em;
+  }
+}
+
+.btn--close:hover{
+  opacity: .7;
+}
+
+.btn--close:focus{
+  outline:2px solid currentColor;
+}
+

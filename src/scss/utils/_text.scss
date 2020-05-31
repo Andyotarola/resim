@@ -18,8 +18,8 @@
 }
 
 @each $key,$value in $buttonsColor{
-   .text-#{key}{
-      color: #{$value} !important;
+   .text-#{$key}{
+      color:$value !important;
    }
 } 
 

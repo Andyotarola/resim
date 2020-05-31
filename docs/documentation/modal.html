@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Resim | Modal</title>
+   <link rel="stylesheet" href="../../dist/css/resim.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+   <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <h1 class="text-md text-center">Modales</h1>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <h2 class="text-md">Modal small en X y en Y</h2>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-12 flex jc--center">
+            <button class="btn--primary ripple" data-toggle="modal" data-target="#XSmallYSmall">XSmall-YSmall</button>
+         </div>
+      </div>
+   </div>
+   
+   <div class="modal" id="XSmallYSmall" tabindex="-1" data-backdrop="static">
+      <div class="modal--dialog x-small y-small">
+         <div class="container expanded h-100">
+            <div class="row p-2">
+               <div class="col-sm-12 flex jc--between">
+                  <h1 class="text-md">Use Google's location service?</h1>
+                  <button class="btn--close" data-dismiss="modal">X</button>
+               </div>
+               <div class="col-sm-12">
+                  <p> Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running. </p>
+               </div>
+               <div class="col-sm-12 flex jc--end mt-2">
+                  <button class="btn-flat__primary ripple p-2 mr-4" data-dismiss="modal">Cancel</button>
+                  <button class="btn-flat__primary ripple p-2">Yes</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- CODE -->
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <pre>
+               <code class="html">
+
+               </code>
+            </pre>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 flex jc--center">
+            <button class="btn--primary" data-toggle="modal" data-target="#XMediumYLarge">XMedium-YMedium</button>
+         </div>
+      </div>
+   </div>
+   <!-- CODE -->
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <pre>
+               <code class="html">
+
+               </code>
+            </pre>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 flex jc--center">
+            <button class="btn--primary" data-toggle="modal" data-target="#XMediumYMedium">XMedium-YMedium</button>
+         </div>
+      </div>
+   </div>
+   <!-- CODE -->
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <pre>
+               <code class="html">
+
+               </code>
+            </pre>
+         </div>
+      </div>
+   </div>
+
+   
+   <div class="modal" id="XMediumYLarge" data-backdrop="static" tabindex="-1">
+      <div class="modal--dialog x-medium y-medium">
+         <div class="container expanded p-2">
+            <div class="row p-2 mb-2">
+               <div class="col-sm-12 flex jc--between">
+                  <h2 class="text-md">New Account</h2>
+                  <button class="btn--close" data-dismiss="modal">X</button>
+               </div>
+            </div>               
+            <form action="" class="form w-100 p-none">
+               <div class="row">
+                  <div class="form__group">
+                     <div class="form__field">
+                        <input type="text" class="form__control" placeholder="Nombres">
+                     </div>
+                     <div class="form__field">
+                        <input type="text" class="form__control" placeholder="Apellidos">
+                     </div>
+                     <div class="form__field">
+                        <input type="text" class="form__control" placeholder="Nombre de usario">
+                     </div>
+                  </div>
+                  <div class="form__group">
+                     <div class="form__field">
+                        <input type="email" class="form__control" placeholder="Correo Electronico">
+                     </div>
+                  </div>
+                  <div class="form__group">
+                     <div class="form__field">
+                        <input type="password" class="form__control" placeholder="Password">
+                     </div>
+                  </div>
+                  <div class="form__group">
+                     <div class="form__field">
+                        <input type="number" class="form__control" placeholder="Edad">
+                     </div>
+                  </div>
+               </div>
+               <div class="flex h-100 p-2 jc--end">
+                  <button class="btn-flat__success" type="menu">Guardar</button>
+                  <button class="btn-flat__primary" data-dismiss="modal">Salir</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal" id="XMediumYMedium">
+      <div class="modal--dialog x-large y-large">
+         <h2 class="text-center">Modal XMedium-YMedium</h2>
+      </div>
+   </div>
+
+   <script src="../../dist/js/resim.min.js"></script>
+</body>
+</html>

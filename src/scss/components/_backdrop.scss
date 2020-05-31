@@ -6,9 +6,15 @@
    opacity: 0.46;
    background-color:rgb(33, 33, 33);
    z-index: var(--z-tooltip);
-
+   
    &-open{
-      padding-right: 17px;
       overflow-y: hidden;
+   }
+
+   @include rwd(large){
+      &-open{
+         overflow-y: hidden;
+         padding-right: 18px;
+      }
    }
 }

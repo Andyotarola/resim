@@ -128,11 +128,11 @@ $positions: top,bottom,left,right;
 
 @for $x from 1 through 5 {
    .p-#{$x} {
-      padding: $x * .25rem;
+      padding: $x * .25rem !important;
    }
 
    .m-#{$x} {
-      margin: $x * .25rem;
+      margin: $x * .25rem !important;
    }
 }
 

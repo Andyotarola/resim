@@ -1,0 +1,13 @@
+.ripple{
+   position: relative;
+   overflow: hidden;
+
+   &--active{
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate3d(-50%, -50%, 0);
+      background-color: currentColor;
+      overflow: hidden;
+   }
+}

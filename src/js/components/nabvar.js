@@ -2,7 +2,7 @@ function activeNavbar(){
    let navbars = Array.from(document.querySelectorAll('[data-toggle=navbar]'));
    let navbars_sublist = Array.from(document.querySelectorAll('[data-toggle=navbar_sublist]'));
    let backdrop = document.createElement("div");
-
+   
    if(navbars.length > 0){
       navbars.forEach((el,i)=>{
          let navbar = null;
@@ -56,11 +56,13 @@ function activeNavbar(){
          
          btn.addEventListener('click',(e)=>{
             e.preventDefault();
-            if(data_toggle === 'navbar_sublist'){
-               if(navbar_list.style.display === "" || navbar_list.style.display === "none"){
-                  navbar_list.style.display = "block";    
-               }else{
-                  navbar_list.style.display = "none";
+            if(innerWidth < 1024){
+               if(data_toggle === 'navbar_sublist'){
+                  if(navbar_list.style.display === "" || navbar_list.style.display === "none"){
+                     navbar_list.style.display = "block";    
+                  }else{
+                     navbar_list.style.display = "none";
+                  }
                }
             }
             
@@ -80,6 +82,12 @@ function activeNavbar(){
          document.body.removeChild(backdrop);
       }
    }
+
+   window.addEventListener("resize",()=>{
+      if(document.body.outerHTML.includes(backdrop.outerHTML)){
+         document.body.removeChild(backdrop);
+      }
+   })
 
    window.addEventListener('click', (e)=>{
       navbars.forEach((el,i)=>{

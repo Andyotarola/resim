@@ -1,8 +1,6 @@
 .form{
-
    margin:0 auto;
    width: 94vw;
-   border: 1px solid $borderColor;
    padding: 1em 1em 0 1em;
  
    &__file{
@@ -126,9 +124,9 @@
    &__field{
      display: flex;
      justify-content: space-between;
-     margin-bottom: 1.2em;
+     margin-bottom: .75em;
      width: 100%;
-     padding-right: 1em;
+     padding: .5em;
    }
  
    &__field &__label{
