@@ -10,137 +10,265 @@
    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-   <nav class="navbar bg--primary">
-      <div class="navbar__main">
-         <div class="navbar__title">
-            Navbar
-         </div>       
-         <div class="navbar__content">
-            <div class="menu-open" data-target="#navbar1" data-toggle="navbar"></div>
-            <ul class="navbar__list center" id="navbar1">
-               <li class="navbar__item">
-                  <a href="#inicio" class="navbar__link">Inicio</a>
-               </li class="navbar__item">
-               <li class="navbar__item">
-                  <a href="#" class="navbar__link" data-target="#productos" data-toggle="navbar_sublist">Productos <span class="arrow-bottom"></span></a>
-                  <ul class="navbar__sublist" id="productos">
-                     <li class="navbar__item">
-                        <a href="#" class="navbar__link ripple" data-target="#celulares" data-toggle="navbar_sublist">Celulares <span class="arrow"></span></a>
-                        <ul class="navbar__lastlist" id="celulares">
-                           <li class="navbar__item">
-                              <a href="#" class="navbar__link">Iphone</a>
-                           </li>
-                           <li class="navbar__item">
-                              <a href="#" class="navbar__link">Samsung</a>
-                           </li>
-                        </ul>
-                     </li>
-                     <li class="navbar__item">
-                        <a href="#telivisores" class="navbar__link">Televisores</a>
-                     </li>
-                     <li class="navbar__item">
-                        <a href="#equipos" class="navbar__link">Equipos de sonido</a>
-                     </li>
-                     <li class="navbar__item">
-                        <a href="#play" class="navbar__link">Play Station</a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="navbar__item">
-                  <a href="#marcas" class="navbar__link" data-toggle="navbar_sublist" data-target="#marcas">Marcas <span class="arrow-bottom"></span></a>
-                  <ul class="navbar__sublist" id="marcas">
-                     <li class="navbar__item">
-                        <a href="#" class="navbar__link" data-toggle="navbar_sublist" data-target="#sony">SONY <span class="arrow"></span></a>
-                        <ul class="navbar__lastlist" id="sony">
-                           <li class="navbar__item">
-                              <a href="" class="navbar__link">sony</a>
-                           </li>
-                        </ul>
-                     </li>
-                  </ul>
-               </li>
-               <li class="navbar__item">
-                  <a href="#contactenos" class="navbar__link">Contactenos</a>
-               </li>
-               <li class="navbar__item">
-                  <a href="#promociones" class="navbar__link">Promociones</a>
-               </li>
-               <li class="navbar__item">
-                  <a href="#solicitud_de_crédito" class="navbar__link">Solicitud de crédito</a>
-               </li>
-            </ul>
+   <nav class="navbar">
+      <div class="navbar__container bg--danger">
+         <div class="navbar__main reverse">
+            <div class="navbar__title">
+               Navbar
+            </div>       
+            <div class="navbar__content">
+               <button class="btn--icon ripple d-lg-none" data-toggle="navbar" data-target="#navbar1">
+                  <i class="menu-open"></i>
+               </button>
+               <ul class="navbar__list collapse end" id="navbar1">
+                  <li class="navbar__item">
+                     <a href="#inicio" class="navbar__link">Inicio</a>
+                  </li class="navbar__item">
+                  <li class="navbar__item">
+                     <a href="#" class="navbar__link" data-target="#productos" data-toggle="navbar_sublist">Productos <span class="arrow-bottom"></span></a>
+                     <ul class="navbar__sublist bg--dark" id="productos">
+                        <li class="navbar__item">
+                           <a href="#" class="navbar__link ripple" data-target="#celulares" data-toggle="navbar_sublist">Celulares <span class="arrow"></span></a>
+                           <ul class="navbar__lastlist bg--dark" id="celulares">
+                              <li class="navbar__item">
+                                 <a href="#" class="navbar__link">Iphone</a>
+                              </li>
+                              <li class="navbar__item">
+                                 <a href="#" class="navbar__link">Samsung</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="navbar__item">
+                           <a href="#telivisores" class="navbar__link">Televisores</a>
+                        </li>
+                        <li class="navbar__item">
+                           <a href="#equipos" class="navbar__link">Equipos de sonido</a>
+                        </li>
+                        <li class="navbar__item">
+                           <a href="#play" class="navbar__link">Play Station</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="navbar__item">
+                     <a href="#marcas" class="navbar__link" data-toggle="navbar_sublist" data-target="#marcas">Marcas <span class="arrow-bottom"></span></a>
+                     <ul class="navbar__sublist" id="marcas">
+                        <li class="navbar__item">
+                           <a href="#" class="navbar__link" data-toggle="navbar_sublist" data-target="#sony">SONY <span class="arrow"></span></a>
+                           <ul class="navbar__lastlist" id="sony">
+                              <li class="navbar__item">
+                                 <a href="" class="navbar__link">sony</a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="navbar__item">
+                     <a href="#contactenos" class="navbar__link">Contactenos</a>
+                  </li>
+                  <li class="navbar__item">
+                     <a href="#promociones" class="navbar__link">Promociones</a>
+                  </li>
+                  <li class="navbar__item">
+                     <a href="#solicitud_de_crédito" class="navbar__link">Solicitud de crédito</a>
+                  </li>
+               </ul>
+            
+            </div>
+         </div>
+      </div>   
+   </nav>
+
+   <div class="container expanded">
+      <div class="row p-none">
+         <div class="col-sm-12">
+            <div class="carousel mb-5" style="height: 600px">
+               <div class="carousel__container" data-toggle="carousel">
+                  <div class="carousel__item carousel__active">
+                     <div class="carousel__content" style="background-color: #3f51b5;">
+                        <div class="flex jc--center ai--center w-100 h-100 us-none">
+                           <h1 class="text-white text-lg">SLIDER 5</h1>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel__item">
+                     <div class="carousel__content" style="background-color: slateblue;">
+                        <div class="flex jc--center ai--center w-100 h-100 us-none">
+                           <h1 class="text-white text-lg">SLIDER 6</h1>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel__item">
+                     <div class="carousel__content" style="background-color: #c2185b;">
+                        <div class="flex jc--center ai--center w-100 h-100 us-none">
+                           <h1 class="text-white text-lg">SLIDER 7</h1>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel__item">
+                     <div class="carousel__content" style="background-color: teal;">
+                        <div class="flex jc--center ai--center w-100 h-100 us-none">
+                           <h1 class="text-white text-lg">SLIDER 8</h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="carousel__prev ripple" data-toggle="carousel_prev"></div>
+               <div class="carousel__next ripple" data-toggle="carousel_next"></div>
+         
+               <div class="carousel__controls" data-toggle="carousel_controls">
+                  <button class="carousel__pagination ripple"></button>
+                  <button class="carousel__pagination ripple"></button>
+                  <button class="carousel__pagination ripple"></button>
+                  <button class="carousel__pagination ripple"></button>   
+               </div>
+               
+            </div>
          </div>
       </div>
-   </nav>
-   
-   <div class="container">
-      <pre>
-      <code class="html">
-      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar bg--primary"</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__main collapse"</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__title"</span>&gt;</span>
-            Navbar
-         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>       
-         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__content"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu-open"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#navbar1"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"navbar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__list center"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"navbar1"</span>&gt;</span>
-               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#inicio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Inicio<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#productos"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"navbar_sublist"</span>&gt;</span>Productos <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arrow-bottom"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__sublist"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"productos"</span>&gt;</span>
-                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#celulares"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"navbar_sublist"</span>&gt;</span>Celulares <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__lastlist"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"celulares"</span>&gt;</span>
-                           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Iphone<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Samsung<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#telivisores"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Televisores<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#equipos"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Equipos de sonido<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#play"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Play Station<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#marcas"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"navbar_sublist"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#marcas"</span>&gt;</span>Marcas <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arrow-bottom"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__sublist"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"marcas"</span>&gt;</span>
-                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"navbar_sublist"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#sony"</span>&gt;</span>SONY <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__lastlist"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sony"</span>&gt;</span>
-                           <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>sony<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#contactenos"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Contactenos<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#promociones"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Promociones<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__item"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#solicitud_de_crédito"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar__link"</span>&gt;</span>Solicitud de crédito<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-   <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
-         </code>
-      </pre>
    </div>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 flex jc--center">
+            <button class="btn--primary ripple" data-toggle="modal" data-target="#XSmallYSmall">XSmall-YSmall</button>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal" id="XSmallYSmall" tabindex="-1" data-backdrop="static">
+      <div class="modal--dialog" style="max-width: 290px;">
+         <div class="container expanded h-100">
+            <div class="row p-2">
+               <div class="col-sm-12 flex jc--between">
+                  <h3 class="text-sub as--center">Use Google's location service?</h3>
+                  <button class="btn--close btn--icon ripple" data-dismiss="modal"></button>
+               </div>
+               <div class="col-sm-12">
+                  <p class="text-sm"> Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running. </p>
+               </div>
+               <div class="col-sm-12 flex jc--end mt-2">
+                  <button class="btn-flat__primary ripple p-2 mr-4" data-dismiss="modal">Cancel</button>
+                  <button class="btn-flat__primary ripple p-2">Yes</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="card">
+
+      <div class="card__item" id="card1">
+  
+        <div class="card__content">
+          <div class="card__picture ripple" data-target="#card1" data-toggle="card">
+             <div class="skeleton"></div>  
+            <!-- <img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" alt="" class="card__img skeleton"> -->
+            <img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" alt="" class="card__img">
+          </div>
+  
+          <div class="card__footer">
+            <div class="card__title text-center">
+              <h3>Big House</h3>
+            </div>
+            
+            <div class="flex jc--end">
+               <button class="btn-flat__primary ripple card__btn" data-target="#card1" data-toggle="card">Ver más
+               </button>
+            </div>
+          </div>
+  
+        </div>
+
+        <div class="card__reveal" tabindex="-1">
+            <div class="flex jc--between m-1">
+               <div class="card__title p-none">
+                  <h3>Big House</h3>
+               </div>
+               <button class="btn--close ripple btn--icon" data-dismiss="card"></button>
+            </div>
+            <div class="flex jc--between m-3">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam veritatis repudiandae blanditiis, corporis recusandae molestias voluptatem neque fugit officiis similique consectetur non nam aperiam nisi esse nostrum delectus nulla voluptates.</p>
+            </div>
+        </div>
+  
+      </div>
+      <div class="card__item" id="card2">
+  
+      <div class="card__content">
+          <div class="card__picture ripple" data-target="#card2" data-toggle="card">
+            <img src="https://cdn.vuetifyjs.com/images/cards/road.jpg" alt="" class="card__img">
+          </div>
+  
+          <div class="card__footer">
+            <div class="card__title text-center">
+              <h3>The long way</h3>
+            </div>
+            
+            <div class="flex jc--end">
+               <button class="btn-flat__primary ripple" data-target="#card2" data-toggle="card">Ver más</button>
+            </div>
+          </div>
+  
+      </div>
+        
+      <div class="card__reveal" tabindex="-1">
+         <div class="flex jc--between m-1">
+            <div class="card__title p-none">
+               <h3>The long way</h3>
+            </div>
+            <button class="btn--close ripple btn--icon" data-dismiss="card"></button>
+         </div>
+         <div class="flex jc--between m-3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam veritatis repudiandae blanditiis, corporis recusandae molestias voluptatem neque fugit officiis similique consectetur non nam aperiam nisi esse nostrum delectus nulla voluptates.</p>
+         </div>
+      </div>
+  
+      </div>
+      <div class="card__item" id="card3">
+  
+         <div class="card__content">
+           <div class="card__picture ripple" data-target="#card3" data-toggle="card">
+             <img src="https://cdn.vuetifyjs.com/images/cards/plane.jpg" alt="" class="card__img">
+           </div>
+   
+           <div class="card__footer">
+             <div class="card__title text-center">
+               <h3>The Airplane</h3>
+             </div>
+             
+             <div class="flex jc--end">
+                <button class="btn-flat__primary ripple" data-target="#card3" data-toggle="card">Ver más</button>
+             </div>
+           </div>
+   
+         </div>
+
+         <div class="card__reveal" tabindex="-1">
+            <div class="flex jc--between m-3">
+               <div class="card__title p-none">
+                  <h3>The Airplane</h3>
+               </div>
+               <button class="btn--close ripple btn--icon" data-dismiss="card"></button>
+            </div>
+            <div class="flex jc--between m-3">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam veritatis repudiandae blanditiis, corporis recusandae molestias voluptatem neque fugit officiis similique consectetur non nam aperiam nisi esse nostrum delectus nulla voluptates.</p>
+            </div>
+         </div>
+   
+      </div>
+  
+   </div>
+
+
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <h1 class="text-xlg">Medio</h1>
+         </div>
+      </div>
+   </div>
+   
 
    <script src="../../dist/js/resim.min.js"></script>
    

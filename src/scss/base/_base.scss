@@ -9,12 +9,26 @@ html{
 
 body{
    margin: 0;
-   font-size: var(--body-font-size);
    color: $textColor;
 }
 
 h1{
    font-size: var(--h1-font-size);
+}
+h2{
+   font-size: var(--h2-font-size);
+}
+h3{
+   font-size: var(--h3-font-size);
+}
+h4{
+   font-size: var(--h4-font-size);
+}
+h5{
+   font-size: var(--h5-font-size);
+}
+h6{
+   font-size: var(--h6-font-size);
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -34,6 +48,7 @@ p{
 a{
    text-decoration: none;
    color: inherit;
+   font-size: 13.3333px;
 }
 
 img{
@@ -42,6 +57,12 @@ img{
 
 button{
    cursor: pointer;
+   border: none;
+   background: none;
+}
+
+button:focus{
+   outline: none;
 }
 
 ::selection{

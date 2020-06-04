@@ -1,4 +1,5 @@
-$primary : #0096f8;
+// $primary : #0096f8;
+$primary : #1867c0;
 $primaryAlt : darken($primary, 5%);
 $secondary: #51cf8e;
 $secondaryAlt : darken($secondary, 5%);
@@ -33,3 +34,7 @@ $selectionTxtColor: #fff;
 @import "components/backdrop";
 @import "components/modal";
 @import "components/ripple";
+@import "components/card";
+@import "components/skeleton";
+@import "components/accordion";
+@import "components/dropdown";

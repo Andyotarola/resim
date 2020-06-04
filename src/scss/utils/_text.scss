@@ -1,20 +1,10 @@
 :root{
-   --text-small:.86rem;
+   --text-xsmall:.5rem;
+   --text-small:.75rem;
    --text-medium:1rem;
-   --text-large:3rem;
- 
-   @include rwd(medium){
-     --text-small:.94rem;
-     --text-medium:1.2rem;
-     --text-large:3.6rem;
-   }
- 
-   @include rwd(large){
-     --text-small:.99rem;
-     --text-medium:1.4rem;
-     --text-large:3.6rem;
-   }
- 
+   --tet-sub: 1.175rem;
+   --text-large:2.5rem;
+   --text-xlarge:3rem;
 }
 
 @each $key,$value in $buttonsColor{
@@ -37,6 +27,9 @@
    &-right{
       text-align: right;
    }
+   &-xsm{
+      font-size:var(--text-xsmall) !important;
+   }
    &-sm{
       font-size:var(--text-small) !important;
    }
@@ -45,5 +38,11 @@
    }
    &-lg{
       font-size:var(--text-large) !important;
+   }
+   &-xlg{
+      font-size:var(--text-xlarge) !important;
+   }
+   &-sub{
+      font-size:var(--text-sub) !important;
    }
 }

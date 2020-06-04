@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Card | Resim</title>
+   <link rel="stylesheet" href="../../dist/css/resim.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+   <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+   
+   <div class="card">
+
+      <div class="card__item" id="card1">
+  
+        <div class="card__content">
+          <div class="card__picture ripple" data-target="#card1" data-toggle="card">
+             <div class="skeleton"></div>  
+            <!-- <img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" alt="" class="card__img skeleton"> -->
+            <img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" alt="" class="card__img">
+          </div>
+  
+          <div class="card__footer">
+            <div class="card__title text-center">
+              <h3>Big House</h3>
+            </div>
+            
+            <div class="flex jc--end">
+               <button class="btn-flat__primary ripple card__btn" data-target="#card1" data-toggle="card">Ver más
+               </button>
+            </div>
+          </div>
+  
+        </div>
+
+        <div class="card__reveal" tabindex="-1">
+            <div class="flex jc--between m-3">
+               <div class="card__title p-none">
+                  <h3>Big House</h3>
+               </div>
+               <button class="btn--close ripple" data-dismiss="card"></button>
+            </div>
+            <div class="flex jc--between m-3">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam veritatis repudiandae blanditiis, corporis recusandae molestias voluptatem neque fugit officiis similique consectetur non nam aperiam nisi esse nostrum delectus nulla voluptates.</p>
+            </div>
+        </div>
+  
+      </div>
+      <div class="card__item" id="card2">
+  
+      <div class="card__content">
+          <div class="card__picture ripple" data-target="#card2" data-toggle="card">
+            <img src="https://cdn.vuetifyjs.com/images/cards/road.jpg" alt="" class="card__img">
+          </div>
+  
+          <div class="card__footer">
+            <div class="card__title text-center">
+              <h3>The long way</h3>
+            </div>
+            
+            <div class="flex jc--end">
+               <button class="btn-flat__primary ripple" data-target="#card2" data-toggle="card">Ver más</button>
+            </div>
+          </div>
+  
+      </div>
+        
+      <div class="card__reveal" tabindex="-1">
+         <div class="flex jc--between m-3">
+            <div class="card__title p-none">
+               <h3>The long way</h3>
+            </div>
+            <button class="btn--close ripple" data-dismiss="card"></button>
+         </div>
+         <div class="flex jc--between m-3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam veritatis repudiandae blanditiis, corporis recusandae molestias voluptatem neque fugit officiis similique consectetur non nam aperiam nisi esse nostrum delectus nulla voluptates.</p>
+         </div>
+      </div>
+  
+      </div>
+      <div class="card__item" id="card3">
+  
+         <div class="card__content">
+           <div class="card__picture ripple" data-target="#card3" data-toggle="card">
+             <img src="https://cdn.vuetifyjs.com/images/cards/plane.jpg" alt="" class="card__img">
+           </div>
+   
+           <div class="card__footer">
+             <div class="card__title text-center">
+               <h3>The Airplane</h3>
+             </div>
+             
+             <div class="flex jc--end">
+                <button class="btn-flat__primary ripple" data-target="#card3" data-toggle="card">Ver más</button>
+             </div>
+           </div>
+   
+         </div>
+
+         <div class="card__reveal" tabindex="-1">
+            <div class="flex jc--between m-3">
+               <div class="card__title p-none">
+                  <h3>The Airplane</h3>
+               </div>
+               <button class="btn--close" data-dismiss="card">X</button>
+            </div>
+            <div class="flex jc--between m-3">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam veritatis repudiandae blanditiis, corporis recusandae molestias voluptatem neque fugit officiis similique consectetur non nam aperiam nisi esse nostrum delectus nulla voluptates.</p>
+            </div>
+         </div>
+   
+      </div>
+  
+   </div>
+
+   <script src="../../dist/js/resim.min.js"></script>
+</body>
+</html>

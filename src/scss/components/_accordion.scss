@@ -1,0 +1,28 @@
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    width: 100%;
+    overflow: hidden;
+    padding: .175em .175em 0 .175em;
+    margin-bottom: .4em;
+  }
+
+  &__content{
+    height: 0;
+    transition: padding .3s cubic-bezier(0, 0, 0, 1);
+    padding-bottom: 0px;
+  }
+  
+  &__item.accordion__active &__content{
+    padding: 1em 0;
+    height: auto;
+    border: 1px solid $borderColor;
+  }
+
+  &__description {
+    padding: 0 1em;
+  }
+}

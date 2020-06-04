@@ -24,11 +24,11 @@
    }
 
    .carousel__active.carousel__item--right, &__item--next:not(.carousel__item--left){
-      transform: translateX(100%);
+      transform: translate3d(100%, 0, 0);
    }
 
    .carousel__active.carousel__item--left, &__item--prev:not(.carousel__item--right){
-      transform: translateX(-100%);
+      transform: translate3d(-100%, 0, 0);
    }
 
    &__active, &__item--next, &__item--prev{
@@ -65,27 +65,27 @@
 
    &__prev{
       @extend %carousel_navigate;
-      transform: translateX(-200%);
+      transform: translate3d(-200%, 0, 0);
    }
 
    &__next{
       @extend %carousel_navigate;
       right: 0;
-      transform: translateX(200%);
+      transform: translate3d(200%, 0, 0);
    }
 
    &:hover &__prev{
-      transform: translateX(0%);
+      transform: translate3d(0, 0, 0);
    }
    &:hover &__next{
-      transform: translateX(0%);
+      transform: translate3d(0, 0 , 0);
    }
 
    &__prev::after{
       content: "";
       display: block;
       @extend %carousel_navigate_icon;
-      transform: rotate(45deg);
+      transform: rotate3d(0, 0, 1, 45deg);
       margin-left: .2rem;
    }
 
@@ -93,7 +93,7 @@
       content: "";
       display: block;
       @extend %carousel_navigate_icon;
-      transform: rotate(-135deg);
+      transform: rotate3d(0, 0, 1, -135deg);
       margin-right: .2rem;
    }
 
@@ -119,6 +119,11 @@
       color: #fff;
    }
    &__pagination:hover::after{
+      background-color: rgba(255, 255, 255, .9);  
+      box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
+   }
+
+   &__pagination:focus::after{
       background-color: rgba(255, 255, 255, .9);  
       box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
    }

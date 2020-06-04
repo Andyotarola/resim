@@ -31,7 +31,7 @@
       grid-template-columns: repeat(12, 1fr);
       row-gap: 1rem;
       -moz-column-gap: .65rem;
-           column-gap: .65rem;
+      column-gap: .65rem;
       padding-right: 5px;
       padding-left: 5px;
       padding-top: .9em;
@@ -78,7 +78,10 @@
 
 }
 
-$positions: top,bottom,left,right;
+$positions: top,
+bottom,
+left,
+right;
 
 @for $i from 1 through length($positions) {
 
@@ -126,6 +129,24 @@ $positions: top,bottom,left,right;
 
 }
 
+@include rwd(0, 768px) {
+   .d-sm-none {
+      display: none !important;
+   }
+}
+
+@include rwd(medium, large) {
+   .d-md-none {
+      display: none !important;
+   }
+}
+
+@include rwd(large) {
+   .d-lg-none {
+      display: none !important;
+   }
+}
+
 @for $x from 1 through 5 {
    .p-#{$x} {
       padding: $x * .25rem !important;
@@ -148,15 +169,15 @@ $positions: top,bottom,left,right;
    width: 100% !important;
 }
 
-.h-100{
+.h-100 {
    height: 100% !important;
 }
 
-.us-none{
+.us-none {
    -webkit-user-select: none;
-      -moz-user-select: none;
-       -ms-user-select: none;
-           user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
 
 .flex {
@@ -192,22 +213,31 @@ $positions: top,bottom,left,right;
    justify-content: space-between;
 }
 
-$self: start,center,end;
+.p-relative {
+   position: relative;
+}
+
+$self: start,
+center,
+end;
 
 @each $value in $self {
-   .as--#{$value}{
+   .as--#{$value} {
       align-self: #{$value};
    }
-   .js--#{$value}{
+
+   .js--#{$value} {
       justify-self: #{$value};
    }
 
-   @if $value == start or $value == end{
-      .ai--#{$value}{
+   @if $value==start or $value==end {
+      .ai--#{$value} {
          align-items: flex-#{$value};
       }
-   }@else{
-      .ai--#{$value}{
+   }
+
+   @else {
+      .ai--#{$value} {
          align-items: #{$value};
       }
    }

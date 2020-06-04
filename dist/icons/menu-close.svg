@@ -2,7 +2,7 @@
 
   <g class="menu_close" id="menu_close">
     <path d="M20,20 L 40 40 M 40 20 L 20 40"
-      stroke="#fff"
+      stroke="#000"
       stroke-width="4"
       stroke-linecap="round"
       fill="none">

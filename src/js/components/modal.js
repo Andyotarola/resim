@@ -24,6 +24,8 @@ function modals(){
             modalNow = modal;
             modal.classList.add("modal--active")
             backdrop.classList.add("backdrop")
+            backdrop.style.zIndex = "100"
+
             focusableFirst = document.activeElement;
 
             document.body.classList.add("backdrop-open");

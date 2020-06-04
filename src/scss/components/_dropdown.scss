@@ -1,0 +1,48 @@
+.dropdown{
+   width: auto;
+   display: block;
+   position: relative;
+
+   &__menu{
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid $borderColor;
+      margin-top: .4rem;
+      display: none;
+      color: $textColor;
+   }
+
+   .dropdown.active &__menu{
+      display: block;
+   }
+
+   &__link{
+      font-size: 1rem;
+      padding: .25em 1.5em;
+      display: block;
+      position: relative;
+   }
+
+   &__link::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;      
+      display: block;
+   }
+
+   &__link:hover::after{
+      background-color: currentColor;
+      opacity: .175;
+   }
+   &__link:focus::after{
+      background-color: currentColor;
+      opacity: .275;
+   }
+   &__link:focus{
+      outline: none;
+   }
+
+}
