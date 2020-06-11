@@ -14,12 +14,20 @@
     height: 0;
     transition: padding .3s cubic-bezier(0, 0, 0, 1);
     padding-bottom: 0px;
+    position: relative;
+    top: 2px;
+    border: 1px solid currentColor;
   }
   
+  .navbar__item &__content{
+    border: none !important;
+  }
+
   &__item.accordion__active &__content{
     padding: 1em 0;
     height: auto;
-    border: 1px solid $borderColor;
+    top: 0px;
+    margin-top: .2em;
   }
 
   &__description {

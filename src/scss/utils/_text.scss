@@ -1,31 +1,46 @@
-:root{
-   --text-xsmall:.5rem;
-   --text-small:.75rem;
-   --text-medium:1rem;
-   --tet-sub: 1.175rem;
-   --text-large:2.5rem;
-   --text-xlarge:3rem;
+@include rwd(0, map-get($breakpoints, medium)) {
+   :root{
+      --text-xsmall:.45rem;
+      --text-small:.65rem;
+      --text-medium:1rem;
+      --text-sub: 1.15rem;
+      --text-title: 1.35rem;
+      --text-large:1.75rem;
+      --text-xlarge:2.25rem;
+   }      
 }
 
-@each $key,$value in $buttonsColor{
-   .text-#{$key}{
+@include rwd(medium){
+   :root{
+      --text-xsmall:.5rem;
+      --text-small:.75rem;
+      --text-medium:1rem;
+      --text-sub: 1.175rem;
+      --text-title: 1.5rem;
+      --text-large:2.5rem;
+      --text-xlarge:3rem;
+   }      
+}
+
+@each $key,$value in $colors{
+   body .text-#{$key}{
       color:$value !important;
    }
 } 
 
-.text-white{
+body .text-white{
    color: #fff !important;
 }
 
 .text{
    &-center{
-      text-align: center;
+      text-align: center !important;
    }
-   &-left{
-      text-align: left;
+   &-start{
+      text-align: start !important;
    }
-   &-right{
-      text-align: right;
+   &-end{
+      text-align: end !important;
    }
    &-xsm{
       font-size:var(--text-xsmall) !important;
@@ -44,5 +59,11 @@
    }
    &-sub{
       font-size:var(--text-sub) !important;
+   }
+   &-title{
+      font-size:var(--text-title) !important;
+   }
+   &-bold{
+      font-weight: 900;
    }
 }

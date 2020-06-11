@@ -6,6 +6,7 @@ import card from "./components/card";
 import skeleton from "./components/skeleton";
 import accordion from "./components/accordion";
 import dropdown from "./components/dropdown";
+import file from "./components/file";
 
 carousel();
 navbars();
@@ -15,6 +16,7 @@ card();
 skeleton();
 accordion();
 dropdown();
+file();
 
 const observer = new MutationObserver((mutations)=>{
    carousel();
@@ -25,6 +27,7 @@ const observer = new MutationObserver((mutations)=>{
    skeleton();
    accordion();
    dropdown();
+   file();
 })
 
 observer.observe(document.querySelector('body'), {

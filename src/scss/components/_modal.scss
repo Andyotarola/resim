@@ -16,7 +16,14 @@
 
    &--persistent{
       transform: scale3d(1, 1, 1);
-      animation: modal-persistent .15s cubic-bezier(.25,.8,.25,1);
+      -webkit-animation: modal-persistent .15s cubic-bezier(.25,.8,.25,1);
+              animation: modal-persistent .15s cubic-bezier(.25,.8,.25,1);
+   }
+
+   @-webkit-keyframes modal-persistent{
+      to{
+         transform: scale3d(1.02, 1.02, 1.02);
+      }
    }
 
    @keyframes modal-persistent{

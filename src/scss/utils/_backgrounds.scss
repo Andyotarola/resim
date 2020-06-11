@@ -1,4 +1,4 @@
-@each $key,$value  in $buttonsColor {
+@each $key,$value  in $colors {
    .bg--#{$key}{
      background-color: #{$value} !important;
      color: #fff !important;

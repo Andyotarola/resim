@@ -1,0 +1,11 @@
+@each $key,$value  in $colors {
+   .bd--#{$key}{
+      border: 1.5px solid #{$value} !important;
+   }
+}
+.bd--white{
+   border: 1.5px solid #fff !important;
+}
+.bd--circle{
+   border-radius: 50% !important;
+}
