@@ -1,5 +1,7 @@
 .dropdown{
-   width: auto;
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
+   width: fit-content;
    display: block;
    position: relative;
 
@@ -10,10 +12,23 @@
       margin-top: .4rem;
       display: none;
       color: $textColor;
+      z-index: var(--z-tooltip);
    }
 
    .dropdown.active &__menu{
       display: block;
+   }
+   
+   &__menu.left{
+      top: 0;
+      margin-top: 0;
+      right: 100%;
+   }
+
+   &__menu.right{
+      top: 0;
+      margin-top: 0;
+      left:100%;
    }
 
    &__link{

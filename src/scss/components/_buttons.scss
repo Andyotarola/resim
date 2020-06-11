@@ -1,102 +1,67 @@
-@each $key,
-$value in $buttonsColor {
-
-  .btn--#{$key} {
-    width: auto;
-    border: none;
-    background-color: $value;
-    padding: 1em 1em 1em;
-    cursor: pointer;
-    border-radius: 4px;
-    color: #fff;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    user-select: none;
-  }
-
-  .btn--#{$key}:focus {
-    border: none;
-    outline: none !important;
-    box-shadow: 0 0 0 .2rem lighten($value, 30%);
-  }
-
-  .btn--#{$key}:hover {
-    background-color: darken($value, 5%);
-  }
-
-}
-
-@each $key,
-$value in $buttonsColor {
-
-  .btn-flat__#{$key}{
-    border-radius: 4px;
-    width: auto;
-    border: none;
-    background:none;
-    padding: 1em 1em 1em;
-    color: $value;
-    transition: .3s;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    user-select: none;
-  }
-
-  .btn-flat__#{$key}:hover{
-    background-color: rgba($value, .09);
-  }
-
-  .btn-flat__#{$key}:focus{
-    outline: none !important;
-    background-color: rgba($value, .2);
-  }  
-
-  .btn-outline__#{$key} {
-    border-radius: 4px;
-    width: auto;
-    border: none;
-    border: 1px solid $value;
-    background-color: #fff;
-    padding: 1em 1em 1em;
-    color: $value;
-    transition: .3s;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .btn-outline__#{$key}:hover {
-    background-color: $value;
-    color: #fff;
-  }
-
-  .btn-outline__#{$key}:focus {
-    outline: none !important;
-    box-shadow: 0 0 0 .2rem lighten($value, 30%);
-  }
-
-}
-
-.btn-flat__white{
+.btn{
   border-radius: 4px;
-  width: auto;
-  border: none;
-  background:none;
-  padding: 1em 1em 1em;
-  color: #fff;
-  transition: .3s;
-  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: .0892857143em;
+  outline: 0;
   position: relative;
-  overflow: hidden;
+  text-decoration: none;
+  text-indent: .0892857143em;
+  transition-duration: .28s;
+  transition-property: box-shadow,transform,opacity;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  white-space: nowrap;
+  padding: .75em 1em;
+  color: inherit;
+  display: block;
+  font-size: $fontSizeText;
 }
 
-.btn-flat__white:hover{
-  background-color: rgba(#fff, .09);
+.btn--flat{
+  background-color: transparent;
 }
 
-.btn-flat__white:focus{
-  outline: none !important;
-  background-color: rgba(#fff, .2);
+.btn--outline{
+  border: thin solid;
+}
+
+.btn--rounded{
+  border-radius: 28px;
+}
+
+.btn:hover::before{
+  opacity: .04;
+}
+.btn:focus:before{
+  opacity: .12;
+}
+
+.btn:not(.btn--outline):not(.btn--flat):hover::before{
+  opacity: .08;
+}
+.btn:not(.btn--outline):not(.btn--flat):focus::before{
+  opacity: .24;
+}
+.btn:not(.btn--outline):not(.btn--flat):active{
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+.btn::before{
+  border-radius: inherit;
+  bottom: 0;
+  color: inherit;
+  content: "";
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity .2s cubic-bezier(.4,0,.6,1);
+  background-color: currentColor;
 }
 
 .btn--block {
@@ -106,9 +71,12 @@ $value in $buttonsColor {
 
 .btn--close {
   border: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   color: currentColor;
   padding:0 .2em;
-  user-select: none;
   border-radius: 50%;
   transition-duration: .28s;
   transition-property: box-shadow,transform,opacity,background-color;

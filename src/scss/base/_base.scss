@@ -1,5 +1,6 @@
 *,*::after,*::before{
    box-sizing: border-box;
+   padding: 0;
 }
 
 html{
@@ -8,8 +9,9 @@ html{
 }
 
 body{
-   margin: 0;
+   margin: var(--header-height) 0 0 0;
    color: $textColor;
+   font-size: $fontSizeText;
 }
 
 h1{
@@ -48,11 +50,16 @@ p{
 a{
    text-decoration: none;
    color: inherit;
-   font-size: 13.3333px;
+   font-size: inherit;
 }
 
 img{
    max-width: 100%;
+}
+
+textarea{
+   overflow: auto;
+   resize: vertical;
 }
 
 button{
@@ -72,3 +79,22 @@ button:focus{
 }
    
 ::-moz-focus-inner {border:0;}
+
+:root{
+   --h1-font-size: 2rem;
+   --h2-font-size: 1.75rem;
+   --h3-font-size: 1.5rem;
+   --h4-font-size: 1.25rem;
+   --h5-font-size: 1rem;
+   --h6-font-size: .75rem;
+}
+@include rwd(medium) {
+   :root{
+      --h1-font-size: 2.5rem;
+      --h2-font-size: 2rem;
+      --h3-font-size: 1.75rem;
+      --h4-font-size: 1.5rem;
+      --h5-font-size: 1.25rem;
+      --h6-font-size: 1rem;
+   }
+}

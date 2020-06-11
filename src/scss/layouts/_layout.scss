@@ -1,6 +1,7 @@
 .container {
    width: 100%;
    margin: 0 auto;
+   padding: 0 5px;
 
    @for $i from 1 through 12 {
       .row>.col-sm-#{$i} {
@@ -32,18 +33,15 @@
       row-gap: 1rem;
       -moz-column-gap: .65rem;
       column-gap: .65rem;
-      padding-right: 5px;
-      padding-left: 5px;
       padding-top: .9em;
       padding-bottom: .9em;
    }
 
    @include rwd(medium) {
       width: 94%;
+      padding: 0;
 
       &>.row {
-         padding-right: 15px;
-         padding-left: 15px;
          padding-top: .9em;
          padding-bottom: .9em;
       }
@@ -115,7 +113,7 @@ right;
          }
       }
 
-      @include rwd(0, 768px) {
+      @include rwd(0, map-get($breakpoints, medium)) {
          .m-sm-#{str-slice(nth($positions, $i),1,1)}-#{$x} {
             margin-#{nth($positions, $i)}: $x * .25rem !important;
          }
@@ -129,7 +127,7 @@ right;
 
 }
 
-@include rwd(0, 768px) {
+@include rwd(0, map-get($breakpoints, medium)) {
    .d-sm-none {
       display: none !important;
    }
@@ -155,6 +153,10 @@ right;
    .m-#{$x} {
       margin: $x * .25rem !important;
    }
+}
+
+.d-block{
+   display: block !important;
 }
 
 .m-none {
@@ -214,7 +216,10 @@ right;
 }
 
 .p-relative {
-   position: relative;
+   position: relative !important;
+}
+.p-absolute{
+   position: absolute !important;
 }
 
 $self: start,

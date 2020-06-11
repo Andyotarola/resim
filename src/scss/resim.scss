@@ -1,30 +1,31 @@
-// $primary : #0096f8;
-$primary : #1867c0;
-$primaryAlt : darken($primary, 5%);
-$secondary: #51cf8e;
-$secondaryAlt : darken($secondary, 5%);
-$third : #f56431d9;
-$thirdAlt : darken($third, 5%);
-$success: #28a745;
-$dark : #343a40;
-$danger: #dc3545;
-$warning: #ffc107;
-$info : #17a2b8;
-$gray: #545b62;
+$colors:(
+   primary: #1867c0,
+   secondary:#51cf8e,
+   third: #f56431d9,
+   success: #28a745,
+   dark : #343a40,
+   danger: #dc3545,
+   warning: #ffc107,
+   info : #17a2b8,
+   gray: #545b62,
+);
 $textColor: #53575A;
 $selectionBgColor : #51cf8e;
 $selectionTxtColor: #fff;
+$fontSizeText:16px;
 
 @import "utils/variables";
 @import "utils/mixin";
 @import "utils/text";
 @import "utils/icons";
+@import "utils/link";
 
 @import "base/base";
 
 @import "layouts/layout";
 
-@import "themes/backgrounds";
+@import "utils/backgrounds";
+@import "utils/border";
 
 @import "components/form";
 @import "components/buttons";
@@ -38,3 +39,4 @@ $selectionTxtColor: #fff;
 @import "components/skeleton";
 @import "components/accordion";
 @import "components/dropdown";
+@import "components/list";

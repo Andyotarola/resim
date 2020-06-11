@@ -28,7 +28,7 @@
                   width .25s cubic-bezier(.4,0,.2,1), 
                   height .25s cubic-bezier(.4,0,.2,1), 
                   opacity .1s cubic-bezier(.4,0,.2,1);
-      will-change: transform,opacity;
+      will-change: transform, opacity, width,  height;
       z-index: 1;
    }
 }

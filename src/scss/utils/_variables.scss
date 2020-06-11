@@ -8,46 +8,10 @@ $breakpoints:(
 
 $borderColor: #DFE0E0;
 
-$buttonsColor:(
-   primary: $primary,
-   secondary: $secondary,
-   third : $third,
-   success: $success,
-   dark : $dark,
-   danger: $danger,
-   warning: $warning,
-   info : $info,
-   gray: $gray
-);
-
-:root{
-   --h1-font-size: 2.5rem;
-   --h2-font-size: 2rem;
-   --h3-font-size: 1.75rem;
-   --h4-font-size: 1.5rem;
-   --h5-font-size: 1.25rem;
-   --h6-font-size: 1rem;
-}
-
 :root{
    --z-back: -10;
    --z-normal: 1;
    --z-tooltip: 10;
    --z-fixed: 100;
    --z-modal: 1000;
-}
-
-:root{
-   --primary-color: #{$primary};
-   --primaryAlt-color: #{$primaryAlt};
-   --secondary-color: #{$secondary};
-   --secondaryAlt-color: #{$secondaryAlt};
-   --third-color: #{$third};
-   --thirdAlt-color: #{$thirdAlt};
-   --dark-color: #{$dark};
-   --danger-color: #{$danger};
-   --gray-color: #{$gray};
-   --info-color: #{$info};
-   --warning-color: #{$warning};
-   --success-color: #{$success};
 }

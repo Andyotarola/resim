@@ -20,7 +20,8 @@
       width: 100%;
       margin-right: -100%;
       float: left;
-      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
    }
 
    .carousel__active.carousel__item--right, &__item--next:not(.carousel__item--left){
