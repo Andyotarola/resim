@@ -1,6 +1,6 @@
 # Resim
 
-Resim  es una librería CSS/SASS para  crear sitios web rápidos y receptivos.
+Resim  es una librería css/sass para  crear sitios web rápidos y receptivos.
 
 Documentación oficial: https://resim.vercel.app.com/
 
