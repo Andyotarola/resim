@@ -1,8 +1,6 @@
 # Resim
 
-![Logo de Resim](https://resim.vercel.app/img/resim.png =100x20)
-
-Resim  es una librería Sass/CSS para construir layouts web responsive y mobile first.
+Resim  es una librería CSS/SASS para  crear sitios web rápidos y receptivos.
 
 Documentación oficial: https://resim.vercel.app.com/
 
